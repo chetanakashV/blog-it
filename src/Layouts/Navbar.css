@@ -1,0 +1,44 @@
+.Navbar{
+    background-color: blue;
+    width: "90%";
+    margin: 10px;
+    height: 75px;
+    border-radius: 5px;
+    position: relative;
+    white-space: nowrap;
+    display: inline-flexbox;
+}
+.element {
+    color:white;
+    font-size: large;
+    position: relative;
+    left:"10%";
+    margin:10px;
+    border: 10px;
+    white-space: nowrap;
+    display: inline;
+
+}
+
+.active{
+    color:orange;
+}
+
+.Home{
+    left: -580px;
+}
+
+.Login {
+    left: 590px;
+}
+.NewPost{
+    left:  560px;
+}
+.Logoutbutt{
+    background-color: blue;
+    border: none;
+    position: relative;
+    left: 39%;
+    color: white;
+    font-size: 20px;
+}

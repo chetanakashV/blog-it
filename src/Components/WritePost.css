@@ -1,0 +1,57 @@
+*{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: normal;
+    
+} 
+
+.block{    
+    background-color: white;
+    position: relative;
+    width: 1000px;
+    right:"80%";
+    margin:10px;
+    border-radius: 10px;
+    
+}
+
+.Label{
+   color: black;
+   position: relative;
+   
+   left:25%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: large;
+}
+
+textarea{
+    outline: none;
+    resize: both;
+    width: 1000px;
+    height: 430px;
+    position: relative;
+    left:25%;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.text{
+    position: relative;
+    border: 2px solid black;
+    left:25%;
+    width:475px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.Button{
+    position: relative;
+    background:white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    left:25%;
+    height:35px;
+    width:300px;
+    border-radius: 10px;
+   }

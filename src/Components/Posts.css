@@ -1,0 +1,14 @@
+Body{
+    background-color: white;
+}
+.button{
+    background-color: black;
+}
+.DeleteButton{
+    background: rgb(255, 255, 255);
+    color:rgb(244, 0, 0);
+    border: none;
+    position: relative;
+    left: 45%;
+    
+}
