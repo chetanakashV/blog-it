@@ -6,6 +6,28 @@ import { getRemoteConfig, getValue,
  } from "firebase/remote-config";
 import './Navbar.css'
 
+const remoteConfig = getRemoteConfig();
+remoteConfig.settings.fetchTimeoutMillis = 1000; 
+
+async function fetchRemoteConfig() {
+    try {
+        const isFetched = await fetchAndActivate(remoteConfig);
+        console.log("trial",isFetched);
+
+        // if (isFetched) {
+            console.log("Remote config fetched and activated:", isFetched);
+            const bgColorValue = getValue(remoteConfig, "value"); // Assuming bg_color is a boolean
+            return bgColorValue;
+        // } else {
+            console.log("Remote config was not fetched.");
+            return false; // Default to false if fetching failed
+        // }
+    } catch (error) {
+        console.error("Error fetching remote config:", error);
+        return false; // Default to false if there's an error
+    }
+}
+
 
 function Navbar(props) {
     //const navigate = useNavigate();
@@ -13,7 +35,7 @@ function Navbar(props) {
     const [clickLogin,setClickLogin] = useState(false);
     const [clickWP,setClickWP] = useState(false);
 
-    const handleClickHome  = () => {setClickHome(true); setClickLogin(false); setClickWP(false); }
+    const handleClickHome  = () => {setClickHome(true); setClickLogin(false); setClickWP(false); fetchRemoteConfig(); }
     const handleClickLogin  = () => {setClickHome(false); setClickLogin(true); setClickWP(false);}
     const handleClickWP  = () => {setClickHome(false); setClickLogin(false); setClickWP(true); }
     const logStatus = localStorage.getItem("isAuth");
