@@ -17,6 +17,7 @@ async function fetchRemoteConfig() {
         // if (isFetched) {
             console.log("Remote config fetched and activated:", isFetched);
             const bgColorValue = getValue(remoteConfig, "value"); // Assuming bg_color is a boolean
+            console.log(bgColorValue); 
             return bgColorValue;
         // } else {
             console.log("Remote config was not fetched.");
